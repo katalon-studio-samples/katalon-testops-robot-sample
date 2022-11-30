@@ -7,18 +7,18 @@ Resource          resource.robot
 
 *** Test Cases ***
 Valid Login
-    Open Browser To Login Page
-    Click Button   time_button
-    Input Username    demo
-    Enter Password    mode
-    Capture Page Screenshot    ${CHECKPOINT_LOCATION}/login.png
+    Open Browser To Cura Shop
+    Click Element       //a[contains(text(),'Make Appointment')]
+    Capture Page Screenshot    ${CHECKPOINT_LOCATION}/Login-Dialog-Origin.png
+    Input Username    John Doe
+    Enter Password    ThisIsNotAPassword
+    Capture Page Screenshot    ${CHECKPOINT_LOCATION}/Login-Dialog-With-Data.png
     Submit Credentials
-    Welcome Page Should Be Open
-    Capture Page Screenshot    ${CHECKPOINT_LOCATION}/welcome.png
+    Element Should Be Visible  appointment
     [Teardown]    Close Browser
 
-Validate Login UI
-    Analyze checkpoint "${CHECKPOINT_LOCATION}/login.png"
+Validate Login Dialog Origin
+    Analyze checkpoint "${CHECKPOINT_LOCATION}/Login-Dialog-Origin.png"
 
-Validate Welcome UI
-    Analyze checkpoint "${CHECKPOINT_LOCATION}/welcome.png"
+Validate Login Dialog With Data
+    Analyze checkpoint "${CHECKPOINT_LOCATION}/Login-Dialog-With-Data.png"

@@ -7,9 +7,8 @@ Documentation     A test suite containing tests related to invalid login.
 ...
 ...               This suite also demonstrates using setups and teardowns in
 ...               different levels.
-Suite Setup       Open Browser To Login Page
+Suite Setup       Open Browser To Cura Shop
 Suite Teardown    Close Browser
-Test Setup        Go To Login Page
 Test Template     Login With Invalid Credentials Should Fail
 Resource          resource.robot
 
@@ -24,12 +23,9 @@ Empty Username And Password      ${EMPTY}         ${EMPTY}
 *** Keywords ***
 Login With Invalid Credentials Should Fail
     [Arguments]    ${username}    ${password}
+    Click Element       //a[contains(text(),'Make Appointment')]
     Input Username    ${username}
     Enter Password    ${password}
     Submit Credentials
     Login Should Have Failed
-    Capture Page Screenshot    ${CHECKPOINT_LOCATION}/login-fail.png
 
-Login Should Have Failed
-    Location Should Be    ${ERROR URL}
-    Title Should Be    Error Page
