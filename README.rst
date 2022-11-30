@@ -2,57 +2,9 @@
 Web Visual testing with Upload report to TestOps by Robot Framework and SeleniumLibrary
 ====================================================
 
-Downloading demo package
-========================
-
-To get the demo, you can either `download`_ the repository from GitHub or checkout
-the `source code`_ directly. As a result you get ``testops-robot-sample`` directory with
-``demoapp`` and ``login_tests`` sub directories.
-
-Test cases
-==========
-
-Test case files as well as a resource file used by them are located in
-the ``login_tests`` directory. Click file names below to see the latest versions
-online.
-
-`valid_login.robot`_
-    A test suite with a single test for valid login.
-
-    This test has a workflow that is created using keywords in
-    the imported resource file.
-
-`invalid_login.robot`_
-    A test suite containing tests related to invalid login.
-
-    These tests are data-driven by their nature. They use a single
-    keyword, specified with the ``Test Template`` setting, that is called
-    with different arguments to cover different scenarios.
-
-    This suite also demonstrates using setups and teardowns in
-    different levels.
-
-`gherkin_login.robot`_
-    A test suite with a single Gherkin style test.
-
-    This test is functionally identical to the example in the
-    `valid_login.robot`_ file.
-
-`resource.robot`_
-    A resource file with reusable keywords and variables.
-
-    The system specific keywords created here form our own
-    domain specific language. They utilize keywords provided
-    by the imported SeleniumLibrary_.
-
 Preconditions
 -------------
 
-A precondition for running the tests is having `Robot Framework`_ and
-SeleniumLibrary_ installed, and they in turn require
-Python_. Robot Framework `installation instructions`__ cover both
-Robot and Python installations, and SeleniumLibrary has its own
-`installation instructions`__.
 
 In practice it is easiest to install Robot Framework and
 SeleniumLibrary along with its dependencies using `pip`_ package
