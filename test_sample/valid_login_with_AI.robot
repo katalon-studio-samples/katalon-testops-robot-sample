@@ -9,21 +9,14 @@ Resource          resource.robot
 Valid Login
     Open Browser To Cura Shop
     Capture Page Screenshot    ${CHECKPOINT_LOCATION}/Review-Appoitment.png
+    Analyze checkpoint "${CHECKPOINT_LOCATION}/Review-Appoitment.png"
     Click Element       //a[contains(text(),'Make Appointment')]
     Capture Page Screenshot    ${CHECKPOINT_LOCATION}/Login-Dialog-Origin.png
+    Analyze checkpoint "${CHECKPOINT_LOCATION}/Login-Dialog-Origin.png"
     Input Username    ${VALID USER}
     Enter Password    ${VALID PASSWORD}
     Capture Page Screenshot    ${CHECKPOINT_LOCATION}/Login-Dialog-With-Data.png
+    Analyze checkpoint "${CHECKPOINT_LOCATION}/Login-Dialog-With-Data.png"
     Submit Credentials
     Element Should Be Visible  appointment
     [Teardown]    Close Browser
-
-
-Validate Review Appoitment
-    Analyze checkpoint "${CHECKPOINT_LOCATION}/Review-Appoitment.png"
-
-Validate Login Dialog Origin
-    Analyze checkpoint "${CHECKPOINT_LOCATION}/Login-Dialog-Origin.png"
-
-Validate Login Dialog With Data
-    Analyze checkpoint "${CHECKPOINT_LOCATION}/Login-Dialog-With-Data.png"
