@@ -1,7 +1,7 @@
 from testops_commons.uploader import VisualTestingUploader
 
 
-class CustomLib(object):
+class VisualLibrary(object):
 
     def __init__(self):
         self.__uploader = VisualTestingUploader()
