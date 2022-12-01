@@ -1,12 +1,12 @@
-#Web Visual testing with Upload report to TestOps by Robot Framework and SeleniumLibrary
+# Web Visual testing with Upload report to TestOps by Robot Framework and SeleniumLibrary
 
-##Preconditions
+## Preconditions
 - Prepare library:
 ```
     pip install -r requirements.txt
 ```
 
-##Running tests
+## Running tests
 
 The tests are located in the test_sample directory. They can be executed using the commands :
 ```
