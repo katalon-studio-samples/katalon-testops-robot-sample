@@ -11,7 +11,7 @@
 The tests are located in the test_sample directory. They can be executed using the commands :
 ```
     robot --listener testops.Listener test_sample
-    robot --listener testops.Listener test_sample/valid_login.robot
+    robot --listener testops.Listener test_sample/valid_login_with_AI.robot
     robot --listener testops.Listener test_sample/invalid_login.robot
-    robot --listener testops.Listener test_sample/gherkin_login.robot
+    robot --listener testops.Listener test_sample/gherkin_login_with_AI.robot
 ```
